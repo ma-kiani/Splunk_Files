@@ -1,0 +1,11 @@
+upgrade splunk ES from CLI
+
+
+Upgrade Splunk Enterprise Security using the CLI
+Follow either step 1 OR step 2 to upgrade Splunk Enterprise Security using the CLI:
+On the search head, use the following command to start the installation process from the server command line.
+./splunk install app <path to app> -update 1 -auth <username>:<password>
+
+OR
+Use the following curl command to upgrade Splunk Enterprise Security.
+curl -k -u admin:password https://localhost:8089/services/apps/local -d filename="true" -d name="<file name and directory>" -d update="true" -v
